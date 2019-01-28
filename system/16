@@ -1,13 +1,19 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    03                                                 :+:      :+:    :+:    #
+#    16                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: axelgerv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/01/25 12:00:52 by axelgerv          #+#    #+#              #
-#    Updated: 2019/01/25 12:00:54 by axelgerv         ###   ########.fr        #
+#    Created: 2019/01/25 14:31:59 by axelgerv          #+#    #+#              #
+#    Updated: 2019/01/25 14:34:41 by axelgerv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
- ifconfig en1 | grep 'ether' | cut  -d ' ' -f2
+#The service is called "cron"
+
+/etc/cron.d
+/etc/cron.hourly
+/etc/cron.daily
+/etc/cron.weekly
+/etc/cron.monthly

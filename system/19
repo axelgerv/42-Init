@@ -1,0 +1,13 @@
+#commande : systemctl list-unit-files --type service | grep enabled
+
+autovt@.service                        enabled
+console-setup.service                  enabled
+cron.service                           enabled
+getty@.service                         enabled
+keyboard-setup.service                 enabled
+networking.service                     enabled
+rsyslog.service                        enabled
+ssh.service                            enabled
+sshd.service                           enabled
+syslog.service                         enabled
+systemd-timesyncd.service              enabled
