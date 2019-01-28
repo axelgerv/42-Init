@@ -6,11 +6,11 @@
 #    By: axelgerv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2019/01/25 14:31:59 by axelgerv          #+#    #+#              #
-#    Updated: 2019/01/25 14:34:41 by axelgerv         ###   ########.fr        #
+#    Updated: 2019/01/28 16:03:56 by axelgerv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-#The service is called "cron"
+# The service is called "cron"
 
 /etc/cron.d
 /etc/cron.hourly

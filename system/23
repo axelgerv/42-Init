@@ -1,15 +1,15 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    17                                                 :+:      :+:    :+:    #
+#    23                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: axelgerv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/01/25 14:42:06 by axelgerv          #+#    #+#              #
-#    Updated: 2019/01/28 16:03:29 by axelgerv         ###   ########.fr        #
+#    Created: 2019/01/28 16:00:33 by axelgerv          #+#    #+#              #
+#    Updated: 2019/01/28 16:51:09 by axelgerv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ssh login@ip
-
-# example : ssh axelgerv@10.13.0.80
+# shh : ssh login@ip
+# consol mod : sudo login new_user
+# graphic : Logout of the actual session (or reboot the VM) and login as new user
