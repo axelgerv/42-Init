@@ -1,13 +1,24 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    13                                                 :+:      :+:    :+:    #
+#    02                                                 :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: axelgerv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/01/25 12:02:26 by axelgerv          #+#    #+#              #
-#    Updated: 2019/01/28 16:06:07 by axelgerv         ###   ########.fr        #
+#    Created: 2019/01/29 13:15:40 by axelgerv          #+#    #+#              #
+#    Updated: 2019/01/29 14:07:01 by axelgerv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-# e3r1p9.42.fr
+#!/bin/bash
+
+read -p "User to delete: " arg1
+
+cat /etc/passwd | grep home | grep $arg1 && {
+	sudo killall -u $arg1 #(-u for USER)
+	echo "All process link to $arg1 has been killed."
+	sudo userdel -rf $arg1
+	echo "$arg1 has been removed."
+} || {
+	echo "This user does not exist."
+}

@@ -5,9 +5,35 @@
 #                                                     +:+ +:+         +:+      #
 #    By: axelgerv <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
-#    Created: 2019/01/25 12:00:52 by axelgerv          #+#    #+#              #
-#    Updated: 2019/01/28 16:07:34 by axelgerv         ###   ########.fr        #
+#    Created: 2019/01/30 10:16:46 by axelgerv          #+#    #+#              #
+#    Updated: 2019/01/30 15:26:33 by axelgerv         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-ifconfig en1 | grep 'ether' | cut  -d ' ' -f2
+#!/bin/bash
+
+read -p "User to add: " login
+
+if cat /etc/passwd | grep home | grep $login > /dev/null
+then
+	echo -e "\nThis user exist."
+	exit
+else
+	sudo adduser $login
+	echo "Added $login user."
+fi
+
+yes='y'
+no='n'
+
+while [ -z $sudo_right ] || [ "$sudo_right" != "$yes" ] && [ "$sudo_right" != "$no" ]
+do
+	read -p "Do you wish to give sudo rights to the user ? [Y/n]" sudo_right
+done
+if [ "$sudo_right" == "$yes" ]
+then
+	sudo usermod -G sudo $login
+	echo -e "\nSudo rights added for $login."
+else
+ 	echo -e "\nSudo rights not add."
+fi
